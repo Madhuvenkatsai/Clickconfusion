@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Settings Configuration</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            /* This forces horizontal scrolling instead of vertical */
+            display: flex;
+            flex-direction: row;
+            width: 400vw; /* 4 times the viewport width */
+            overflow-y: hidden;
+            overflow-x: auto;
+            background-color: #eeeeee;
+            padding: 50px;
+            align-items: center;
+        }
+        section {
+            width: 100vw;
+            padding: 20px;
+            box-sizing: border-box;
+            border-right: 5px solid black;
+        }
+        .hidden-results {
+            margin-top: 50px;
+            padding: 10px;
+            background: blue;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+        <h1>Preferences (Scroll Right ➡)</h1>
+        <p>This is page 1 of settings.</p>
+        <div>
+            <input type="checkbox" id="c1"><label for="c1">Enable annoying popups (Always True)</label><br>
+            <input type="checkbox" id="c2"><label for="c2">Dark Mode (Coming 2035)</label>
+        </div>
+        <br>
+        <a href="dashboard.html">Exit Settings</a>
+    </section>
+
+    <section>
+        <h1>More Preferences</h1>
+        <p>Keep scrolling...</p>
+        <select>
+            <option>Theme: Ugly</option>
+            <option>Theme: Uglier</option>
+        </select>
+    </section>
+
+    <section>
+        <h1>Unrelated Information</h1>
+        <p>Did you know? The mitochondria is the powerhouse of the cell.</p>
+    </section>
+
+    <section>
+        <h1>Financial Section</h1>
+        <p>Congratulations. You found the fees section located deep within the settings panel.</p>
+        <a href="fees.html" class="hidden-results">Review Hidden Campus Fees</a>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

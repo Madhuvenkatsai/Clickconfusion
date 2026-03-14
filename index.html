@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MazeCampus - Secure Student Portal Login Gateway System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-layout">
+    <div class="login-container">
+        <h1>Welcome to MazeCampus</h1>
+        <h3>The #1 highly intuitive portal for our esteemed students!</h3>
+        
+        <form id="loginForm" onsubmit="return handleLogin(event)">
+            <div class="form-group row-reverse">
+                <input type="text" id="username" placeholder="Student ID (Numbers Only) *Required*" pattern="[0-9]+" title="Student ID must contain only numbers." required>
+                <label for="username">Username Data Entry Field</label>
+            </div>
+            
+            <div class="form-group row-reverse">
+                <input type="password" id="password" placeholder="Passphrase (Alphanumeric)" pattern="[a-zA-Z0-9]+" title="Password must contain only letters and numbers." required>
+                <label for="password">Security Access Key (Password)</label>
+            </div>
+
+            <div class="checkbox-madness">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Do NOT Remember Me</label>
+            </div>
+            <div class="checkbox-madness">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I have NOT read the Terms of Service but agree anyway</label>
+            </div>
+
+            <div class="actions">
+                <button type="button" class="btn-dashboard-fake" onclick="window.location.reload();">Dashboard Access / Login</button>
+                <!-- Misleading element: The actual submit button is completely unstyled and tiny -->
+                <button type="submit" class="btn-tiny-submit">Submit</button>
+            </div>
+        </form>
+
+        <div class="help-links">
+            <a href="#" onclick="alert('Forgot password? Please ask a pigeon to deliver a written request to the registrar office.')">Forgot Password?</a> | 
+            <a href="#" class="random-hover">Need Help?</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

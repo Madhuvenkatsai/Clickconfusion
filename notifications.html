@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urgent Notifications Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: darkblue;
+            color: yellow;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .flashy-notification {
+            animation: blinker 1s linear infinite;
+            font-size: 30px;
+            margin: 20px;
+            border: 5px solid red;
+            padding: 10px;
+        }
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+        .fake-close {
+            position: absolute;
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: move;
+        }
+        .tiny-fee-link {
+            position: fixed;
+            bottom: 2px;
+            right: 2px;
+            font-size: 6px; /* Almost invisible */
+            color: darkblue; /* Blends with background */
+            text-decoration: none;
+        }
+        .tiny-fee-link:hover {
+            color: yellow;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>99+ UNREAD NOTIFICATIONS</h1>
+    
+    <div class="flashy-notification">
+        URGENT: YOUR LIBRARY BOOK IS 0.4 SECONDS OVERDUE.
+        <button class="fake-close" style="top:5px; right:5px;" onclick="alert('Cannot close this warning.')">X</button>
+    </div>
+
+    <div class="flashy-notification">
+        ATTENTION: THE CAFETERIA IS SERVING MYSTERY MEAT TODAY.
+        <button class="fake-close" style="top:50px; left:5px;" onclick="alert('Dismiss failed.')">Close</button>
+    </div>
+
+    <!-- Hidden access to the fees page -->
+    <a href="fees.html" class="tiny-fee-link">click here to pay your hidden late fees</a>
+
+    <br><br><br>
+    <a href="dashboard.html" style="color: white; font-size: 20px;">Return to Dashboard Safety</a>
+
+    <script src="script.js"></script>
+</body>
+</html>

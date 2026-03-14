@@ -1,0 +1,255 @@
+/* Base Styles - Deliberately clashing colors and bad typography */
+:root {
+    --primary-color: #0000ff; /* Eye-searing blue */
+    --secondary-color: #ff00ff; /* Magenta */
+    --bg-color: #f4f4f4;
+    --text-color: #333333;
+    --danger-color: #ff0000;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif; /* Outdated default font */
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden; /* Cause some lateral scrolling issues on specific pages */
+}
+
+/* === LOGIN PAGE SPECIFIC === */
+.login-layout {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="2" fill="yellow"/></svg>');
+    background-color: #8b0000; /* Dark red background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+.annoying-banner {
+    width: 100%;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px 0;
+    border-bottom: 5px solid limegreen;
+}
+
+.login-container {
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 40px;
+    border: 3px dashed var(--primary-color);
+    border-radius: 15px; /* Inconsistent border radius */
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 10px 10px 0px var(--secondary-color);
+}
+
+/* Confusing form elements */
+.form-group.row-reverse {
+    display: flex;
+    flex-direction: column-reverse; /* Labels below inputs */
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.form-group input {
+    padding: 15px;
+    border: 2px solid green;
+    border-radius: 0;
+    font-size: 16px;
+    background-color: #e0ffff; /* Light cyan inputs */
+}
+
+.checkbox-madness {
+    margin: 15px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Terrible buttons */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.btn-giant-red {
+    background-color: var(--danger-color);
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+    padding: 20px 40px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-dashboard-fake {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: 2px solid blue;
+    cursor: pointer;
+    width: 80%;
+    border-radius: 20px;
+}
+
+/* The actual submit button hidden in plain sight */
+.btn-tiny-submit {
+    background: transparent;
+    border: 1px solid #ccc;
+    font-size: 8px;
+    color: #ccc;
+    cursor: pointer;
+    padding: 2px 5px;
+    align-self: flex-end;
+}
+
+.random-hover:hover {
+    font-size: 2px;
+}
+
+/* === DASHBOARD PAGE SPECIFIC === */
+.dashboard-layout {
+    font-family: Arial, Helvetica, sans-serif; /* Inconsistent font change */
+    background-color: #e6e6fa; /* Lavender */
+    display: grid;
+    grid-template-areas: 
+        "nav nav"
+        "content side";
+    grid-template-columns: 1fr 250px;
+    height: 100vh;
+}
+
+.top-nav {
+    grid-area: nav;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Weird alignment */
+    border-bottom: 10px solid var(--secondary-color);
+}
+
+.top-nav .logo {
+    font-size: 32px;
+    font-weight: bold;
+    transform: rotate(-5deg); /* Annoying rotation */
+}
+
+.nav-links a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: white !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Sidebar on the wrong side by default, but now very professional */
+.sidebar {
+    grid-area: side;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-left: 1px solid #e0e0e0;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.05);
+}
+
+.sidebar h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.professional-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.professional-nav li {
+    margin-bottom: 10px;
+}
+
+.nav-item {
+    display: block;
+    color: #555;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    background-color: #f8f9fa;
+    border-left: 4px solid transparent;
+}
+
+.nav-item:hover {
+    background-color: #eef2f5;
+    color: #2980b9;
+    border-left-color: #3498db;
+    transform: translateX(-5px); /* Moves opposite of traditional hover */
+}
+
+.dashboard-content {
+    grid-area: content;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.widgets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.widget {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #999;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1); /* Inset shadow for no reason */
+}
+
+.spinning-widget:hover {
+    animation: spinny 2s linear infinite;
+}
+
+@keyframes spinny {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Hover runaway effect */
+.hover-runaway {
+    position: relative;
+    transition: transform 0.1s;
+}
+.hover-runaway:hover {
+    transform: translate(10px, -10px);
+}

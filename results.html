@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Results</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #ffff00; /* Bright yellow */
+            color: #ccffcc; /* Light green - unreadable contrast */
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-transform: uppercase;
+        }
+        .terrible-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 15px; /* Adds awful gaps */
+        }
+        .terrible-table th, .terrible-table td {
+            background-color: lightyellow; /* Just slightly off the background color */
+            padding: 5px;
+            border: 1px dotted rgba(0,0,0,0.1); /* Barely visible border */
+            text-align: right; /* Weird alignment */
+        }
+        .grade-wrapper {
+            background: rgba(0,255,0,0.2);
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grade-wrapper">
+        <h1 style="color: lightgreen; text-shadow: 1px 1px white;">SEMESTER RESULTS DATABASE</h1>
+        
+        <table class="terrible-table">
+            <thead>
+                <tr>
+                    <th>Subject Code (Alphanumeric)</th>
+                    <th>Credits Attempted vs Earned</th>
+                    <th>Final Alphabetic Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Intro to UX Design</td>
+                    <td>3 / 0</td>
+                    <td>F- (Minus)</td>
+                </tr>
+                <tr>
+                    <td>Advanced Obfuscation</td>
+                    <td>4 / 4</td>
+                    <td>A+ (Excellent)</td>
+                </tr>
+                <tr>
+                    <td>Web Accessibility</td>
+                    <td>? / ?</td>
+                    <td>See Professor</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 50px;">
+            <p style="color: black;">To complain about these grades, please fill out form 89-B in triplicate.</p>
+            <!-- Misleading button that looks like an exit but goes to Settings -->
+            <a href="settings.html" style="background: black; color: white; padding: 10px; text-decoration: none;">Submit Grade Appeal (Goes to Settings)</a>
+            <br><br>
+            <!-- The actual exit -->
+            <a href="dashboard.html" style="color: rgba(0,0,0,0.1);">dashboard</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

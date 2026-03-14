@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MazeCampus Dashboard Area</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-layout">
+    
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="logo">MazeCampus</div>
+        <div class="nav-links">
+            <!-- Unrelated links removed as per request -->
+            <!-- Logout actually goes to grades -->
+            <a href="results.html" class="btn-danger hover-runaway">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside class="sidebar right-side" id="bouncy-sidebar">
+        <h3>Quick Links</h3>
+        <ul class="professional-nav">
+            <li><a href="dashboard.html" class="nav-item">Help Support</a></li>
+            <li><a href="index.html" class="nav-item">Home Area</a></li>
+            <li><a href="settings.html" class="nav-item">Student Profile</a></li>
+            <li><a href="help.html" class="nav-item">System Alerts (99+)</a></li>
+            <li><a href="profile.html" class="nav-item">Configuration</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+        <h1>Welcome, Student [ERROR: NULL_NAME]</h1>
+        
+        <div class="widgets-container">
+            <!-- Widget 1: Completely unrelated -->
+            <div class="widget">
+                <h3>Campus Weather</h3>
+                <p>It is currently <span id="random-temp">75</span>°C. Forecast: Acid Rain.</p>
+                <button onclick="document.getElementById('random-temp').innerText = Math.floor(Math.random() * 100)">Refresh Weather</button>
+            </div>
+
+            <!-- Widget 2 removed as per request (Recent Activity) -->
+
+            <!-- Widget 3 removed as per request (no more orange button) -->
+            
+            <!-- Widget 4: Dead end -->
+            <div class="widget">
+                <h3>Fees Summary</h3>
+                <p>Please check the appropriate portal for fee details to avoid a late penalty.</p>
+                <a href="#" onclick="alert('Error 404: Appropriate portal not found. Penalty applied.')">Go to Fee Portal</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

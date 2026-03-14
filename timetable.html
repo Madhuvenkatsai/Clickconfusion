@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Timetable (Confidential)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #fffacd; /* LemonChiffon */
+            padding: 20px;
+        }
+        .horrible-schedule {
+            /* Instead of a table, it's a massive paragraph of wrapped text */
+            font-size: 16px;
+            line-height: 1.5;
+            word-spacing: -2px; /* Makes it harder to read */
+            border: 1px solid black;
+            padding: 10px;
+            background: white;
+        }
+        .print-btn {
+            position: absolute;
+            bottom: -50px; /* Hidden offscreen basically */
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weekly Academic Timetable Allocation</h1>
+    <p>Please note: All times are in UTC-4.5 and subject to sudden change without notification.</p>
+    
+    <div class="horrible-schedule">
+        MONDAY:: 08:00AM - Introduction to Quantum Confusion in Room 404 (Building does not exist yet). 10:15AM - Advanced Stress Management (Cancelled). 1:00PM - Lunch Break (Mandatory standing). TUESDAY:: 07:30AM - Early morning wake-up call seminar. 11:00AM - Data Structures and Algorithms of Ancient Rome in Room V. WEDNESDAY:: 09:00AM - Mid-week Assessment Preparatory Class. 2:00PM - History of the Internet Browser (Internet Explorer 6 Focus). THURSDAY:: No classes scheduled, but attendance is required on campus for atmospheric purposes. FRIDAY:: 4:00PM - Friday evening rush hour navigation. 6:00PM - Weekend anticipation seminar in the main hall.
+    </div>
+
+    <button class="print-btn" onclick="window.print()">Print (Good Luck)</button>
+    
+    <!-- Link out of this trap -->
+    <br><br>
+    <a href="dashboard.html" style="color: grey;">Escape to Dashboard... Maybe?</a>
+
+    <script src="script.js"></script>
+</body>
+</html>

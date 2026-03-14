@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Area</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #2c3e50;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .profile-card {
+            background-color: #34495e;
+            border: 5px solid #e74c3c;
+            border-radius: 50%; /* Make the whole card round */
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .sneaky-results {
+            margin-top: 20px;
+            background: #f1c40f;
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Student Profile</h1>
+    
+    <div class="profile-card">
+        <h2>[REDACTED]</h2>
+        <p>Major: Undecided</p>
+        <p>Status: Confused</p>
+        
+        <!-- The user requested results to be in the profile -->
+        <a href="results.html" class="sneaky-results">VIEW ACADEMIC RESULTS</a>
+    </div>
+
+    <br><br>
+    <a href="dashboard.html" style="color: #ecf0f1;">Go Back</a>
+
+    <script src="script.js"></script>
+</body>
+</html>

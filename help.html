@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Need Help?</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Inline style specifically to break consistency -->
+    <style>
+        body {
+            background-color: #ffb6c1; /* Light pink */
+            font-family: "Comic Sans MS", "Comic Sans", cursive; /* Terible font choice */
+        }
+        .help-container {
+            text-align: center;
+            padding: 50px;
+        }
+        .useless-button {
+            padding: 20px;
+            font-size: 30px;
+            background-color: transparent;
+            border: 5px dotted purple;
+            cursor: w-resize; /* Wrong cursor type */
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="help-container">
+        <h1>HELP CENTER</h1>
+        <p>Please click the button that solves your problem.</p>
+        
+        <!-- Giant useless buttons -->
+        <div>
+            <button class="useless-button" onclick="alert('Module Not Found.')">I forgot my name</button>
+            <button class="useless-button" onclick="alert('Contact administrator 404.')">Where is the library?</button>
+        </div>
+
+        <!-- Hidden link to actual useful path (About) -->
+        <div style="margin-top: 200px; font-size: 8px;">
+            <p>If you need to see your schedule, perhaps you should read <a href="about.html">about our organization</a>.</p>
+        </div>
+        
+        <!-- A "Back" button that actually takes you to the Dashboard now as requested -->
+        <a href="dashboard.html" style="display:block; margin-top:50px; color:red; font-size: 24px; text-decoration: none;">ACTUAL DASHBOARD ACCESS</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

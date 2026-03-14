@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Obligations</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #00ff00; /* Lime green */
+            color: purple;
+            font-family: inherit;
+        }
+        .marquee-container {
+            width: 50%;
+            margin: 100px auto;
+            border: 10px groove gold;
+            font-size: 24px;
+            padding: 20px;
+            background: white;
+        }
+        .text-number {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Outstanding Balances</h1>
+    
+    <div class="marquee-container">
+        <!-- Scrolling fees that are written out in text instead of numbers -->
+        <marquee scrollamount="20">
+            Total amount due for the current academic semester is exactly
+            <span class="text-number">Forty-Seven Thousand, Two Hundred and Twelve US Dollars and Fifty-Three Cents</span>. 
+            Late fee applied: <span class="text-number">Nine Hundred Dollars</span>. 
+            Processing fee: <span class="text-number">One Dollar and Ninety-Nine Cents</span>.
+        </marquee>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <button onclick="alert('Payment Gateway is currently experiencing existential dread. Please try again next leap year.')" style="padding: 15px 30px; font-size: 20px;">Pay Now</button>
+        <br><br>
+        <a href="dashboard.html">Run away</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
